@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { TaskProvider } from './context/TaskContext';
 import { DashboardLayout } from './components/layout/DashboardLayout';
 import { DashboardPage } from './pages/DashboardPage';
@@ -70,6 +71,7 @@ export function App() {
   return (
     <TaskProvider>
       <MainContent />
+      <Analytics />
     </TaskProvider>
   );
 }
